@@ -1,5 +1,5 @@
 export function verificarArray(array, indice) {
-   if(isNaN(indice) || Array.isArray(indice) || indice == null || indice < 0 || typeof indice != "number" || indice > array.length){
+   if(isNaN(indice) || !Array.isArray(array) || Array.isArray(indice) || indice == null || indice < 0 || typeof indice != "number" || indice > array.length){
         return "Erro a procurar item";
     }
 
