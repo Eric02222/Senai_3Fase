@@ -1,5 +1,6 @@
-import Card from "./Card"
+import Card from "./Card";
 import styles from "./Body.module.css";
+import { CardApi } from "./Card/CardApi";
 
 function Body() {
     const usuarios = [
@@ -12,11 +13,16 @@ function Body() {
         <main className={styles.body}>
             <h2>Usuarios Cadastrados</h2>
             <div className={styles.cardContianer}>
-                {usuarios.map((user) => (
-                    <Card nome={user.nome} idade={user.idade} cidade={user.cidade}/>
+                {usuarios.map((user, index) => (
+                    <Card key={index} nome={user.nome} idade={user.idade} cidade={user.cidade}/>
              ))}
-
             </div>
+
+             <h2>Usuarios Vindo da API</h2>
+            <div className={styles.cardContianer}>
+             <CardApi/>
+            </div>
+
         </main>
     )
 }
