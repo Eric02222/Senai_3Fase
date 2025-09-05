@@ -1,7 +1,18 @@
 {
     "posts": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 }
+      { 
+      "id": "1", 
+      "title": "a title", 
+      "views": 100, 
+      "image": "https://placehold.co/600x400",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat lorem in auctor fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas sit amet nulla et arcu consequat finibus vel eu ex. Suspendisse maximus tellus quis lectus malesuada venenatis. Integer commodo est felis, et fermentum mi vestibulum nec. Pellentesque sed mauris facilisis, imperdiet dui in, pulvinar odio. Cras quis ultricies leo. Aenean leo dolor, egestas ut sodales et, laoreet at sapien. Curabitur id iaculis turpis. Donec maximus condimentum vehicula. Sed justo erat, finibus eget scelerisque vitae, accumsan eu enim. Maecenas tincidunt felis at ipsum venenatis porta. Suspendisse non felis vel leo congue rutrum in id magna. Vivamus id justo urna. Vestibulum hendrerit efficitur arcu. Nulla semper risus a dignissim tristique." },
+
+      { 
+      "id": "2", 
+      "title": "another title", 
+      "views": 200, 
+      "image": "https://placehold.co/600x400",
+      "description": "Phasellus non turpis ullamcorper, tempor elit vel, elementum ligula. Etiam lacinia commodo cursus. Ut interdum rhoncus magna. Nullam blandit sapien et dapibus finibus. Aenean finibus lacinia lectus, tristique tincidunt massa cursus quis. Aliquam eget volutpat mauris. Donec sodales augue nunc. Fusce mollis quam lorem, tempor aliquet erat malesuada eget. Cras vel imperdiet leo. Ut odio sem, lacinia vitae lorem sit amet, eleifend ornare nisi. Curabitur vel rhoncus mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam nec arcu sed ligula vulputate bibendum. Mauris at nulla lectus." }
     ],
     "comments": [
       { "id": "1", "text": "a comment about post 1", "postId": "1" },
