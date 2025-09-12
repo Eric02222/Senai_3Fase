@@ -19,6 +19,7 @@ const Header = () => {
                 }>
                     Blog
                 </NavLink>
+            
             </nav>
         </header>
     )
