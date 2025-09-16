@@ -1,0 +1,138 @@
+{
+  "equipamentos": [
+    {
+      "id": 1,
+      "nomeEq": "maquita irada",
+      "preco": 804
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3,
+      "nomeEq": "Sigma Carrinho DE Ferramentas 6 Gavetas Vermelho",
+      "preco": 800
+    },
+    {
+      "id": 4,
+      "nomeEq": "samaq Seladora Seladora Em L 50x50",
+      "preco": 300
+    },
+    {
+      "nomeEq": "Serra",
+      "preco": 513,
+      "id": 13
+    },
+    {
+      "nomeEq": "Serra",
+      "preco": 513,
+      "id": 14
+    },
+    {
+      "nomeEq": "Serra",
+      "preco": 513,
+      "id": 15
+    },
+    {
+      "nomeEq": "Serra",
+      "preco": 513,
+      "id": 16
+    },
+    {
+      "nomeEq": "Serra",
+      "preco": 513,
+      "id": 17
+    },
+    {
+      "nomeEq": "Serra",
+      "preco": 513,
+      "id": 18
+    },
+    {
+      "nomeEq": "Serra",
+      "preco": 513,
+      "id": 19
+    },
+    {
+      "nomeEq": "Serra",
+      "preco": 513,
+      "id": 20
+    },
+    {
+      "nomeEq": "Serra",
+      "preco": 513,
+      "id": 21
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 22
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 23
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 24
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 25
+    },
+    {
+      "id": 26
+    },
+    {
+      "id": 27
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 28
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 29
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 30
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 31
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 32
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 33
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 34
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 35
+    },
+    {
+      "titulo": "Serra",
+      "preco": 513,
+      "id": 36
+    }
+  ]
+}
