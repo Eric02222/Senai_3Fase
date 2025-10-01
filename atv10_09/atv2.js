@@ -1,11 +1,14 @@
 function enqueue(queue, value) { 
+    if(value == null || value === undefined)return
     queue.push(value);
 }
 function dequeue(queue) {
+    if(queue.length === 0) return
     return queue.shift();
  }
 
 function front(queue) { 
+    if(queue.length === 0) return
     return queue[0];
 }
 

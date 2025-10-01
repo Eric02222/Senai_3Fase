@@ -1,3 +1,16 @@
+
+function binarySearchProf(arr, target) {
+    let inicio = 0, fim = arr.length - 1
+    while(inicio <= fim){
+        const meioArray = Math.floor((inicio + fim)/2);
+        if (arr[meioArray] === target) return meioArray;
+        if (arr[meioArray] < target) inicio = meioArray + 1;
+        else fim = meioArray -1
+    }
+   return 
+}
+
+
 function linearSearch(arr, target) {
     if(target == null || target === undefined) return
     for (let i = 0; i <= arr.length; i++) {
@@ -21,7 +34,6 @@ function binarySearch(arr, target) {
             }
         }
     }
-
 }
 
 function buscaValores() {
