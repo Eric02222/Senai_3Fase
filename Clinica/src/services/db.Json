@@ -3,7 +3,15 @@
     {
       "id": 1,
       "email": "joao@email.com",
-      "password": "123"
+      "password": "12345678"
+    },{
+      "id": 2,
+      "email": "vitor@email.com",
+      "password": "12345678"
+    },{
+      "id": 3,
+      "email": "Juan@email.com",
+      "password": "12345678"
     }
   ]
   

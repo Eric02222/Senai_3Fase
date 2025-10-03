@@ -1,9 +1,10 @@
-import {createContext, useContext, useState, useEffect, Children} from 'react'
+import {createContext, useContext, useState, useEffect} from 'react'
 
 const AuthContext = createContext()
 
+
 export const AuthProvider = ({children}) => {
-    cosnt [user, setUser] = useState("");
+    const [user, setUser] = useState("");
 
     // se ja tiver no localstorage, mantem login
     
@@ -31,4 +32,4 @@ export const AuthProvider = ({children}) => {
     )
 }
 
-export default useAuth = () => useContext(AuthContext)
+export const useAuth = () => useContext(AuthContext)
