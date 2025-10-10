@@ -11,12 +11,17 @@ import Login from './pages/Login/Login';
 import { AuthProvider } from './contexts/AuthContext';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import DashBoard from './pages/DashBoard/DashBoard';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />
   },
+  {
+    path: "/DashBoard",
+    element: <DashBoard />
+  }
 ])
 
 createRoot(document.getElementById('root')).render(
