@@ -21,7 +21,7 @@ afterAll((done) => {
 test('GET /equipamentos', async () => {
     const res = await fetch(`${baseUrl}/equipamentos`);
     if (!res) res.status(404)
-        
+
     expect(res.status).toBe(200);
 }
 )

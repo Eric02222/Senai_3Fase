@@ -13,7 +13,7 @@ const Modal = ({ isOpen, onClose, children }) => {
                 >
                     X
                 </button>
-
+                    
                 {children}
             </div>
         </div>
