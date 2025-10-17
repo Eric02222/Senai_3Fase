@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useAuth } from "../../contexts/AuthContext"
 import axios from "axios"
 import { toast } from "react-toastify"
@@ -11,12 +11,20 @@ export default function LoginForm() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   //contexto
-  const { login } = useAuth()
+  const { login, user } = useAuth()
   //rotas com react router
   const navigate = useNavigate();
 
   //modal
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  useEffect(() => {
+    if(user){
+      navigate('/DashBoard')
+    }
+  }, [user,navigate])
+
+
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -41,8 +49,8 @@ export default function LoginForm() {
         hideProgressBar: true,
         pauseOnHover: false
       })
-
-      setTimeout(() => navigate('/DashBoard'), 2000)
+      navigate('/DashBoard')
+      // setTimeout(() => , 2000)
 
     }
     catch (error) {
@@ -78,8 +86,7 @@ export default function LoginForm() {
       </div>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <h1>conteudo do modal</h1>
-          <RegisterUser />
+        <RegisterUser />
       </Modal>
 
     </div>

@@ -12,6 +12,8 @@ import { AuthProvider } from './contexts/AuthContext';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DashBoard from './pages/DashBoard/DashBoard';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import DashboardLayout from './layouts/DashboardLayout';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/DashBoard",
-    element: <DashBoard />
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    )
   }
 ])
 

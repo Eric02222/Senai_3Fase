@@ -1,18 +1,39 @@
 {
-    "users": [
+  "users": [
     {
       "id": 1,
       "email": "joao@email.com",
       "password": "12345678"
-    },{
+    },
+    {
       "id": 2,
       "email": "vitor@email.com",
       "password": "12345678"
-    },{
+    },
+    {
       "id": 3,
       "email": "Juan@email.com",
       "password": "12345678"
+    },
+    {
+      "email": "eric@gmail",
+      "password": "123123123",
+      "id": 4
+    },
+    {
+      "email": "eric2@gmail",
+      "password": "123123123",
+      "id": 5
+    },
+    {
+      "email": "eric@gmail",
+      "password": "123123123",
+      "id": 6
+    },
+    {
+      "email": "eric@gmail",
+      "password": "123123123",
+      "id": 7
     }
   ]
-  
 }
