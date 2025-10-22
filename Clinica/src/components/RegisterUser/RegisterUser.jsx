@@ -4,6 +4,7 @@ import { toast } from "react-toastify"
 
 const RegisterUser = () => {
     //campos formularios
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
@@ -13,6 +14,7 @@ const RegisterUser = () => {
     const [isSaving, SetIsSaving] = useState(false)
 
     //funções de alteração de estado
+    const handleNameChange = (e) => setName(e.target.value)
     const handleEmailChange = (e) => setEmail(e.target.value)
     const handlePasswordChange = (e) => setPassword(e.target.value)
     const handleConfirmPasswordChange = (e) => setConfirmPassword(e.target.value)
@@ -31,37 +33,50 @@ const RegisterUser = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        if(!ispassordValid()){
+        if (!ispassordValid()) {
             SetIsPasswordMatch(false)
             return
         }
 
         SetIsSaving(true)
-        try{
-            await axios.post('http://localhost:3000/users', {email, password})
+        try {
+            await axios.post('http://localhost:5000/auth/register', {
+                nome:  name,
+                email: email,
+                senha: password,
+                cargo: "Médico"
+            })
+
+
             resetForm()
             SetIsSaving(false)
             toast.success('Usuario criado com sucesso!', {
                 autoClose: 3000,
                 hideProgressBar: true,
                 pauseOnHover: false
-              })
-        }catch (error){
+            })
+        } catch (error) {
             console.error("Erro ao criar usuario", error)
             SetIsSaving(false)
             toast.error('Erro ao criar usuario', {
                 autoClose: 3000,
                 hideProgressBar: true,
                 pauseOnHover: false
-              })
+            })
         }
     }
-    
+
     return (
         <div className='w-full max-w-md p-6 bg-white rounded-xl shadow-lg '>
             <form onSubmit={handleSubmit} className='space-y-4'>
 
                 <h2 className='text-2xl font-bold mb-6 text-center'>Criar Usuário</h2>
+
+                <div>
+                    <label htmlFor="nomeRegisterUser" className='block text-sm font-medium mb-1'>Nome</label>
+                    <input type="text" id='nomeRegisterUser' value={name} onChange={handleNameChange} required className='w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' />
+                </div>
+
 
                 <div>
                     <label htmlFor="emailRegisterUser" className='block text-sm font-medium mb-1'>Email</label>
@@ -76,8 +91,8 @@ const RegisterUser = () => {
                 <div>
                     <label htmlFor="confirmPassword" className='block text-sm font-medium mb-1'>Confirmar Senha</label>
                     <input type="password" id='confirmPassword' value={confirmPassword} onChange={handleConfirmPasswordChange} required minLength={8} className='w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' />
-                    
-                    {!isPasswordMatch &&(
+
+                    {!isPasswordMatch && (
                         <p className='text-red-500 text-sm mt-1 text-center'>Senhas não correspodem</p>
                     )}
 
