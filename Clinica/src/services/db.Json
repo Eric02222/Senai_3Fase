@@ -35,5 +35,178 @@
       "password": "123123123",
       "id": 7
     }
+  ],
+  "patients": [
+    {
+      "id": "1",
+      "fullName": "Juan Henrique",
+      "gender": "Masculino",
+      "birthdate": "11/08/2000",
+      "cpf": "958.555.555-55",
+      "rg": "958.555.555-55",
+      "maritalStatus": "Solteiro",
+      "phone": "48-98888-7777",
+      "email": "juan@gmail.com",
+      "birthplace": "Florianopolis",
+      "emergencyContact": "48-92222-5555",
+      "allergies": "alergia A, Alergia B",
+      "specialCare": "evitar açucar",
+      "heathInsurance": "Unimed",
+      "insuranceNumber": "1251112",
+      "insuranceValidity": "15/10/2027",
+      "address": {
+        "cep": "8888-000",
+        "city": "Florianopolis",
+        "state": "SC",
+        "Street": "Rua das Goiabas",
+        "number": "32",
+        "complement": "casa",
+        "neighborhood": "centro",
+        "reference": "proximo da UPA"
+      }
+    },
+    {
+      "id": "2",
+      "fullName": "fabio",
+      "gender": "Masculino",
+      "birthdate": "11/08/2000",
+      "cpf": "958.555.555-55",
+      "rg": "958.555.555-55",
+      "maritalStatus": "Solteiro",
+      "phone": "48-98888-7777",
+      "email": "juan@gmail.com",
+      "birthplace": "Florianopolis",
+      "emergencyContact": "48-92222-5555",
+      "allergies": "alergia A, Alergia B",
+      "specialCare": "evitar açucar",
+      "heathInsurance": "Unimed",
+      "insuranceNumber": "1251112",
+      "insuranceValidity": "15/10/2027",
+      "address": {
+        "cep": "8888-000",
+        "city": "Florianopolis",
+        "state": "SC",
+        "Street": "Rua das Goiabas",
+        "number": "32",
+        "complement": "casa",
+        "neighborhood": "centro",
+        "reference": "proximo da UPA"
+      }
+    },
+    {
+      "id": "3",
+      "fullName": "Carlos",
+      "gender": "Masculino",
+      "birthdate": "11/08/2000",
+      "cpf": "958.555.555-55",
+      "rg": "958.555.555-55",
+      "maritalStatus": "Solteiro",
+      "phone": "48-98888-7777",
+      "email": "juan@gmail.com",
+      "birthplace": "Florianopolis",
+      "emergencyContact": "48-92222-5555",
+      "allergies": "alergia A, Alergia B",
+      "specialCare": "evitar açucar",
+      "heathInsurance": "Unimed",
+      "insuranceNumber": "1251112",
+      "insuranceValidity": "15/10/2027",
+      "address": {
+        "cep": "8888-000",
+        "city": "Florianopolis",
+        "state": "SC",
+        "Street": "Rua das Goiabas",
+        "number": "32",
+        "complement": "casa",
+        "neighborhood": "centro",
+        "reference": "proximo da UPA"
+      }
+    }
+  ],
+  "consults": [
+    {
+      "id":"1",
+      "patientId": "1",
+      "reason": "gripe",
+      "date": "10/05/2025",
+      "time": "15:40",
+      "description": "to gripado, muita dor",
+      "medication": "Benegrip",
+      "dosagePrecaution": "2 vezes ao dia"
+    },{
+      "id":"2",
+      "patientId": "1",
+      "reason": "gripe",
+      "date": "10/05/2025",
+      "time": "15:40",
+      "description": "to gripado, muita dor",
+      "medication": "Benegrip",
+      "dosagePrecaution": "2 vezes ao dia"
+    },{
+      "id":"3",
+      "patientId": "1",
+      "reason": "gripe",
+      "date": "10/05/2025",
+      "time": "15:40",
+      "description": "to gripado, muita dor",
+      "medication": "Benegrip",
+      "dosagePrecaution": "2 vezes ao dia"
+    },{
+      "id":"4",
+      "patientId": "1",
+      "reason": "gripe",
+      "date": "10/05/2025",
+      "time": "15:40",
+      "description": "to gripado, muita dor",
+      "medication": "Benegrip",
+      "dosagePrecaution": "2 vezes ao dia"
+    },{
+      "id":"5",
+      "patientId": "1",
+      "reason": "gripe",
+      "date": "10/05/2025",
+      "time": "15:40",
+      "description": "to gripado, muita dor",
+      "medication": "Benegrip",
+      "dosagePrecaution": "2 vezes ao dia"
+    }
+  ],
+  "exams": [
+    {
+      "id": "1",
+      "name": "cardiologico",
+      "data": "12/09/2024",
+      "time": "16:00",
+      "type": "cateterismo",
+      "laboratory": "Santa Luzia",
+      "documentoUrl": "site.com.br/exame.pdf",
+      "results": "dados do exame"
+    },{
+      "id": "2",
+      "name": "cardiologico",
+      "data": "12/09/2024",
+      "time": "16:00",
+      "type": "cateterismo",
+      "laboratory": "Santa Luzia",
+      "documentoUrl": "site.com.br/exame.pdf",
+      "results": "dados do exame"
+    },{
+      "id": "3",
+      "name": "cardiologico",
+      "data": "12/09/2024",
+      "time": "16:00",
+      "type": "cateterismo",
+      "laboratory": "Santa Luzia",
+      "documentoUrl": "site.com.br/exame.pdf",
+      "results": "dados do exame"
+    },{
+      "id": "4",
+      "name": "cardiologico",
+      "data": "12/09/2024",
+      "time": "16:00",
+      "type": "cateterismo",
+      "laboratory": "Santa Luzia",
+      "documentoUrl": "site.com.br/exame.pdf",
+      "results": "dados do exame"
+    }
   ]
 }

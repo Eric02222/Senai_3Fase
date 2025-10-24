@@ -1,15 +1,17 @@
 import { Outlet } from "react-router"
 import { useAuth } from "../contexts/AuthContext"
 import { useState } from "react"
+import { SideMenu } from "../components/sideMenu/SideMenu"
+
 
 function DashboardLayout() {
     const { user, logout } = useAuth()
-    
+
 
     return (
-        <div className="felx min-h-screen bg-gray-100 ">
+        <div className="flex min-h-screen bg-gray-100">
             <div>
-                side menu
+                <SideMenu />
             </div>
 
             {/* conteudo principal */}
@@ -25,6 +27,7 @@ function DashboardLayout() {
                 </header>
                 <section className="flex-1 p-6 overflow-y-auto ">
                     <Outlet />
+
                 </section>
             </main>
         </div>
