@@ -24,6 +24,7 @@ const RegisterUser = () => {
 
     //função para limpar formulario apos enviado
     const resetForm = () => {
+        setName('')
         setEmail('')
         setPassword('')
         setConfirmPassword('')
@@ -40,7 +41,7 @@ const RegisterUser = () => {
 
         SetIsSaving(true)
         try {
-            await axios.post('http://localhost:5000/auth/register', {
+            await axios.post('http://localhost:3000/auth/register', {
                 nome:  name,
                 email: email,
                 senha: password,
