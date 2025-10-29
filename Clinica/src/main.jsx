@@ -14,6 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import DashBoard from './pages/DashBoard/DashBoard';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import DashboardLayout from './layouts/DashboardLayout';
+import { Pacientes } from './pages/Pacientes/Pacientes';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
     ),
     children:[
       {path:'dashboard', element:<DashBoard />},
-      // {path:'pacientes', element:<PatientsPage />},
+      {path:'pacientes', element:<Pacientes />},
     ]
   }
 ])

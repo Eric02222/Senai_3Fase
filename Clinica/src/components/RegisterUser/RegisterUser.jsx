@@ -5,6 +5,7 @@ import { toast } from "react-toastify"
 const RegisterUser = () => {
     //campos formularios
     const [name, setName] = useState('')
+    const [cargo, setCargo] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
@@ -15,6 +16,7 @@ const RegisterUser = () => {
 
     //funções de alteração de estado
     const handleNameChange = (e) => setName(e.target.value)
+    const handlesetCargoChange = (e) => setCargo(e.target.value)
     const handleEmailChange = (e) => setEmail(e.target.value)
     const handlePasswordChange = (e) => setPassword(e.target.value)
     const handleConfirmPasswordChange = (e) => setConfirmPassword(e.target.value)
@@ -26,6 +28,7 @@ const RegisterUser = () => {
     const resetForm = () => {
         setName('')
         setEmail('')
+        setCargo("")
         setPassword('')
         setConfirmPassword('')
         SetIsPasswordMatch(true)
@@ -45,7 +48,7 @@ const RegisterUser = () => {
                 nome:  name,
                 email: email,
                 senha: password,
-                cargo: "Médico"
+                cargo: cargo
             })
 
 
@@ -78,10 +81,14 @@ const RegisterUser = () => {
                     <input type="text" id='nomeRegisterUser' value={name} onChange={handleNameChange} required className='w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' />
                 </div>
 
-
                 <div>
                     <label htmlFor="emailRegisterUser" className='block text-sm font-medium mb-1'>Email</label>
                     <input type="email" id='emailRegisterUser' value={email} onChange={handleEmailChange} required className='w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' />
+                </div>
+
+                <div>
+                    <label htmlFor="cargoRegisterUser" className='block text-sm font-medium mb-1'>Cargo</label>
+                    <input type="text" id='cargoRegisterUser' value={cargo} onChange={handlesetCargoChange} required className='w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' />
                 </div>
 
                 <div>
@@ -98,6 +105,7 @@ const RegisterUser = () => {
                     )}
 
                 </div>
+
 
                 <div className='flex justify-center'>
                     <button type='submit' disabled={isSaving} className={`w-full p-2 rounded-lg text-white ${isSaving ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 cursor-pointer'} transition-colors`}>

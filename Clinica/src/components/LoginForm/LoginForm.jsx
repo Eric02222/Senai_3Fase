@@ -37,6 +37,7 @@ export default function LoginForm() {
 
       const res = await axios.post('http://localhost:3000/auth/login', data)
       // console.log(res)
+      const token = res.data.accessToken
 
       if (res.data.length === 0) {
         return toast.error('Usuario não encontrado', {
