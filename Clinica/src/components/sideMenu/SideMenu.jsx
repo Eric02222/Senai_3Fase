@@ -43,7 +43,7 @@ export const SideMenu = () => {
                     {!isCollapse && <h2 className='text-white py-4 font-bold text-lg'>Pacientes</h2>}
 
                     <li>
-                        <Link to="/protuarios" className='flex items-center gap-3 hover:text-cyan-300'><FaListAlt size={20} />{!isCollapse && <span>Protuarios</span>} </Link>
+                        <Link to="/prontuarios" className='flex items-center gap-3 hover:text-cyan-300'><FaListAlt size={20} />{!isCollapse && <span>Protuarios</span>} </Link>
                     </li>
 
                     <li>

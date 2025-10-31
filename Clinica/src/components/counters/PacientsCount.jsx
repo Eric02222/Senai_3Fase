@@ -8,7 +8,7 @@ function PacientsCount() {
     useEffect(() => {
         const fetchpatients = async () => {
             try{
-                const res = await axios.get("http://localhost:3000/pacientes");
+                const res = await axios.get("http://localhost:3000/patients");
                 setPatientCount(res.data.length)
             }catch (error){
                 console.log("Erro ao obter os dados dos pacientes", error)

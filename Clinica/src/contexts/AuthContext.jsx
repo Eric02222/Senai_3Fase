@@ -17,7 +17,7 @@ export const AuthProvider = ({children}) => {
 
     const login = (email) => {
         localStorage.setItem("email", email)
-        localStorage.setItem("token", token)
+        // localStorage.setItem("token", token)
         setUser({email})
     }
     

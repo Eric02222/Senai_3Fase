@@ -34,6 +34,21 @@
       "email": "eric@gmail",
       "password": "123123123",
       "id": 7
+    },
+    {
+      "email": "joao@email.com",
+      "senha": "12345678",
+      "id": 8
+    },
+    {
+      "email": "joao@email.com",
+      "senha": "12345678",
+      "id": 9
+    },
+    {
+      "email": "joao@email.com",
+      "senha": "12345678",
+      "id": 10
     }
   ],
   "patients": [
@@ -124,7 +139,7 @@
   ],
   "consults": [
     {
-      "id":"1",
+      "id": "1",
       "patientId": "1",
       "reason": "gripe",
       "date": "10/05/2025",
@@ -132,8 +147,9 @@
       "description": "to gripado, muita dor",
       "medication": "Benegrip",
       "dosagePrecaution": "2 vezes ao dia"
-    },{
-      "id":"2",
+    },
+    {
+      "id": "2",
       "patientId": "1",
       "reason": "gripe",
       "date": "10/05/2025",
@@ -141,8 +157,9 @@
       "description": "to gripado, muita dor",
       "medication": "Benegrip",
       "dosagePrecaution": "2 vezes ao dia"
-    },{
-      "id":"3",
+    },
+    {
+      "id": "3",
       "patientId": "1",
       "reason": "gripe",
       "date": "10/05/2025",
@@ -150,8 +167,9 @@
       "description": "to gripado, muita dor",
       "medication": "Benegrip",
       "dosagePrecaution": "2 vezes ao dia"
-    },{
-      "id":"4",
+    },
+    {
+      "id": "4",
       "patientId": "1",
       "reason": "gripe",
       "date": "10/05/2025",
@@ -159,8 +177,9 @@
       "description": "to gripado, muita dor",
       "medication": "Benegrip",
       "dosagePrecaution": "2 vezes ao dia"
-    },{
-      "id":"5",
+    },
+    {
+      "id": "5",
       "patientId": "1",
       "reason": "gripe",
       "date": "10/05/2025",
@@ -180,7 +199,8 @@
       "laboratory": "Santa Luzia",
       "documentoUrl": "site.com.br/exame.pdf",
       "results": "dados do exame"
-    },{
+    },
+    {
       "id": "2",
       "name": "cardiologico",
       "data": "12/09/2024",
@@ -189,7 +209,8 @@
       "laboratory": "Santa Luzia",
       "documentoUrl": "site.com.br/exame.pdf",
       "results": "dados do exame"
-    },{
+    },
+    {
       "id": "3",
       "name": "cardiologico",
       "data": "12/09/2024",
@@ -198,7 +219,8 @@
       "laboratory": "Santa Luzia",
       "documentoUrl": "site.com.br/exame.pdf",
       "results": "dados do exame"
-    },{
+    },
+    {
       "id": "4",
       "name": "cardiologico",
       "data": "12/09/2024",
