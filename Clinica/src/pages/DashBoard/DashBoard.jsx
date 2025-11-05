@@ -1,6 +1,7 @@
 import ConsultsCount from "../../components/counters/ConsultsCount"
 import ExamsCount from "../../components/counters/ExamsCount"
 import PacientsCount from "../../components/counters/PacientsCount"
+import PacientList from "../../components/PacientsList/PacientList"
 
 
 function DashBoard() {
@@ -11,6 +12,9 @@ function DashBoard() {
                 <PacientsCount/>
                 <ConsultsCount/>
                 <ExamsCount/>
+            </div>
+            <div>
+                <PacientList/>
             </div>
         </>
     )

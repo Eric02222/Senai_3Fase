@@ -49,6 +49,11 @@
       "email": "joao@email.com",
       "senha": "12345678",
       "id": 10
+    },
+    {
+      "email": "joao@email.com",
+      "senha": "12345678",
+      "id": 11
     }
   ],
   "patients": [

@@ -60,10 +60,10 @@ function PacientList() {
                                 </p>
 
                                 <p className='text-sm text-gray-700'>
-                                    <strong className='text-gray-500'>Idade:</strong> {patients.fullName}
+                                    <strong className='text-gray-500'>Idade:</strong> {patients.birthdate}
                                 </p>
                                 <p className='text-sm text-gray-700'>
-                                    <strong className='text-gray-500'>Plano:</strong> {patients.fullName}
+                                    <strong className='text-gray-500'>Plano:</strong> {patients.Unimed}
                                 </p>
 
 
