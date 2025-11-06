@@ -44,7 +44,7 @@ const RegisterUser = () => {
 
         SetIsSaving(true)
         try {
-            await axios.post('http://localhost:4000/auth/register', {
+            await axios.post('http://localhost:3000/auth/register', {
                 nome:  name,
                 email: email,
                 senha: password,

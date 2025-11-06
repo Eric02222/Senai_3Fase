@@ -8,8 +8,10 @@ const MedicalRepordList = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const fetchPatients = async () => {
+        const token = localStorage.getItem("token")
         try {
-            const res = await axios.get("http://localhost:3000/patients")
+            const res = await axios.get("http://localhost:3000/pacientes" , { headers: { Authorization: `Bearer ${token}` } })
+
             setPatients(res.data)
         } catch (e) {
             console.error("Erro ao obter dados do paticente", e)
@@ -27,7 +29,7 @@ const MedicalRepordList = () => {
     const filteredPatients = patients.filter((patient) => {
         return (
             patient.fullName.toLowerCase().includes(searchTerm.toLowerCase()) || 
-            patient.id.toString().includes(searchTerm)
+            patient.id.toString().includes(searchTerm) 
         )
     })
 
