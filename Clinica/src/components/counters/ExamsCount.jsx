@@ -7,8 +7,9 @@ function ExamsCount() {
 
     useEffect(() => {
         const fetchexamns = async () => {
+            const token = localStorage.getItem("token")
             try{
-                const res = await axios.get("http://localhost:3000/exams");
+                const res = await axios.get("http://localhost:3000/exames", { headers: { Authorization: `Bearer ${token}` } });
                 setExamCount(res.data.length)
             }catch (error){
                 console.log("Erro ao obter os dados dos Exames", error)

@@ -7,8 +7,12 @@ function ConsultsCount() {
 
     useEffect(() => {
         const fetchConsults = async () => {
+            const token = localStorage.getItem("token")
             try{
-                const res = await axios.get("http://localhost:3000/consults");
+                const res = await axios.get("http://localhost:3000/consultas", { 
+                    headers: { Authorization: `Bearer ${token}` },
+                    params: {page: 1, limit: 100}
+                 });
                 setconsultCount(res.data.length)
             }catch (error){
                 console.log("Erro ao obter os dados dos Consultas", error)
