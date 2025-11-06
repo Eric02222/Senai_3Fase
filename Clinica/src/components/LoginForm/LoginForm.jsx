@@ -35,7 +35,7 @@ export default function LoginForm() {
         senha: password
       }
 
-      const res = await axios.post(' http://localhost:3000/auth/login', data)
+      const res = await axios.post(' http://localhost:4000/auth/login', data)
       const token = res.data.accessToken
       console.log(res)
 
