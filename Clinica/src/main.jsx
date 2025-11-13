@@ -16,6 +16,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import DashboardLayout from './layouts/DashboardLayout';
 import MedicalRepordList from './components/MedicalRepordListPage/MedicalRepordList';
 import RegisterFormPatient from './pages/RegisterFormPatient/RegisterFormPatient';
+import ConsultationForm from './components/ConsultationForm/ConsultationForm';
 // import {PatientsPage} from './components/MedicalReportListPage/PatientsPage.jsx'
 
 
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
       {path:'dashboard', element:<DashBoard />},
       {path:'prontuarios', element:<MedicalRepordList/>},
       {path:'pacientes', element:<RegisterFormPatient/>},
+      {path:'consultas', element:<ConsultationForm/>},
     ]
   }
 ])
