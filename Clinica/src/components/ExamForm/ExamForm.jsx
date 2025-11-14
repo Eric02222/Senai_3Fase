@@ -4,7 +4,7 @@ import { toast, ToastContainer } from 'react-toastify'
 
 import Modal from "../Modal/Modal.jsx"
 
-function ConsultationForm() {
+function ExamForm() {
     //variaveis e estados
     const [searchTerm, setSearchTerm] = useState("")
     const [patients, setPatients] = useState([])
@@ -14,12 +14,13 @@ function ConsultationForm() {
 
     const [formData, setFormData] = useState(
         {
-            reason: "",
-            date: "",
+            name: "",
+            data: "",
             time: "",
-            description: "",
-            medication: "",
-            dosagePrecaution: ""
+            type: "",
+            laboratory: "",
+            documentoUrl: "",
+            results: ""
         }
     )
 
@@ -63,12 +64,13 @@ function ConsultationForm() {
 
     const resetForm = () => {
         setFormData({
-            reason: "",
-            date: "",
+            name: "",
+            data: "",
             time: "",
-            description: "",
-            medication: "",
-            dosagePrecaution: ""
+            type: "",
+            laboratory: "",
+            documentoUrl: "",
+            results: ""
         })
     }
 
@@ -83,8 +85,8 @@ function ConsultationForm() {
                 ...formData
             }
 
-            await axios.post("http://localhost:3000/consults", dataToSave)
-            toast.success("Consulta Cadastrada com sucesso", {
+            await axios.post("http://localhost:3000/exams", dataToSave)
+            toast.success("Exame Cadastrada com sucesso", {
                 autoClose: 3000,
                 hideProgressBar: true
             })
@@ -92,11 +94,11 @@ function ConsultationForm() {
             resetForm()
             handleCloseModal()
         } catch (e) {
-            toast.error("Erro ao cadastrar Consulta!", {
+            toast.error("Erro ao cadastrar Exame!", {
                 autoClose: 3000,
                 hideProgressBar: true
             })
-        }finally{
+        } finally {
             setIsSaving(false)
         }
     }
@@ -106,7 +108,7 @@ function ConsultationForm() {
         <section className='p-6 text-gray-800'>
             {/*Campo Busca*/}
             <div className='mb-6'>
-                <label htmlFor="searchBar" className='block text-sm font-semibold mb-2'>Busca paciente para cadastrar consulta</label>
+                <label htmlFor="searchBar" className='block text-sm font-semibold mb-2'>Busca paciente para cadastrar exame</label>
                 <input
                     type="text"
                     id="searchBar"
@@ -147,7 +149,7 @@ function ConsultationForm() {
                 {selectedPatient && (
                     <>
                         <h2 className='text-lg font-bold mb-4 text-cyan-700 '>
-                            Cadastrar consulta para {selectedPatient.fullName}
+                            Cadastrar exame para {selectedPatient.fullName}
                         </h2>
 
                         <div className='mb-4 text-sm text-gray-700'>
@@ -161,11 +163,11 @@ function ConsultationForm() {
 
                         <form onSubmit={handleSubmit} className='space-y-4'>
                             <div>
-                                <label htmlFor="reason" className='block text-sm font-medium mb-1'>Motivo consulta</label>
+                                <label htmlFor="name" className='block text-sm font-medium mb-1'>Nome Exame:</label>
                                 <input type="text"
-                                    name='reason'
-                                    id='reason'
-                                    value={formData.reason}
+                                    name='name'
+                                    id='name'
+                                    value={formData.name}
                                     onChange={handleInputChange}
                                     required
                                     className='w-full border p-2 rounded-lg focus:ring-cyan-600 outline-none' />
@@ -173,11 +175,11 @@ function ConsultationForm() {
 
                             <div className='grid grid-cols-2 gap-4'>
                                 <div>
-                                    <label htmlFor="date" className='block text-sm font-medium mb-1'>Data:</label>
-                                    <input type="date"
-                                        name='date'
-                                        id='date'
-                                        value={formData.date}
+                                    <label htmlFor="data" className='block text-sm font-medium mb-1'>Data:</label>
+                                    <input type="data"
+                                        name='data'
+                                        id='data'
+                                        value={formData.data}
                                         onChange={handleInputChange}
                                         required
                                         className='w-full border p-2 rounded-lg focus:ring-cyan-600 outline-none' />
@@ -196,11 +198,12 @@ function ConsultationForm() {
                             </div>
 
                             <div>
-                                <label htmlFor="description" className='block text-sm font-medium mb-1'>Descrição Problema:</label>
-                                <textarea
-                                    name='description'
-                                    id='description'
-                                    value={formData.description}
+                                <label htmlFor="type" className='block text-sm font-medium mb-1'>Tipo de Operação:</label>
+                                <input
+                                    type='text'
+                                    name='type'
+                                    id='type'
+                                    value={formData.type}
                                     onChange={handleInputChange}
                                     rows='3'
                                     required
@@ -208,11 +211,11 @@ function ConsultationForm() {
                             </div>
 
                             <div>
-                                <label htmlFor="medication" className='block text-sm font-medium mb-1'>Medicação Receita:</label>
+                                <label htmlFor="laboratory" className='block text-sm font-medium mb-1'>Laboratorio:</label>
                                 <input
                                     type='text'
-                                    name='medication'
-                                    id='medication'
+                                    name='laboratory'
+                                    id='laboratory'
                                     value={formData.medication}
                                     onChange={handleInputChange}
                                     required
@@ -220,11 +223,23 @@ function ConsultationForm() {
                             </div>
 
                             <div>
-                                <label htmlFor="dosagePrecaution" className='block text-sm font-medium mb-1'>Dosagem e Precauções:</label>
+                                <label htmlFor="documentoUrl" className='block text-sm font-medium mb-1'>Link do Documento:</label>
                                 <textarea
-                                    name='dosagePrecaution'
-                                    id='dosagePrecaution'
-                                    value={formData.dosagePrecaution}
+                                    name='documentoUrl'
+                                    id='documentoUrl'
+                                    value={formData.documentoUrl}
+                                    onChange={handleInputChange}
+                                    rows='3'
+                                    required
+                                    className='w-full border p-2 rounded-lg focus:ring-cyan-600 outline-none' />
+                            </div>
+
+                            <div>
+                                <label htmlFor="results" className='block text-sm font-medium mb-1'>Resultado:</label>
+                                <textarea
+                                    name='results'
+                                    id='results'
+                                    value={formData.results}
                                     onChange={handleInputChange}
                                     rows='3'
                                     required
@@ -236,7 +251,7 @@ function ConsultationForm() {
                             <div className='flex justify-end gap-3 pt-4'>
                                 <button type='button' onClick={handleCloseModal} className='px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition'>cancelar</button>
 
-                                <button type='submit' disabled={isSaving} className='px-4 py-2 bg-cyan-700 text-white rounded-lg hover:bg-cyan-600 disable:opacity-50 transition'>{isSaving ? "Salvando..." : "Salvar" }</button>
+                                <button type='submit' disabled={isSaving} className='px-4 py-2 bg-cyan-700 text-white rounded-lg hover:bg-cyan-600 disable:opacity-50 transition'>{isSaving ? "Salvando..." : "Salvar"}</button>
                             </div>
                         </form>
                     </>
@@ -246,4 +261,4 @@ function ConsultationForm() {
     )
 }
 
-export default ConsultationForm
+export default ExamForm
