@@ -81,7 +81,7 @@ function ExamForm() {
         try {
             setIsSaving(true)
             const dataToSave = {
-                patientId: selectedPatient.id,
+                // patientId: selectedPatient.id,
                 ...formData
             }
 
@@ -176,7 +176,7 @@ function ExamForm() {
                             <div className='grid grid-cols-2 gap-4'>
                                 <div>
                                     <label htmlFor="data" className='block text-sm font-medium mb-1'>Data:</label>
-                                    <input type="data"
+                                    <input type="date"
                                         name='data'
                                         id='data'
                                         value={formData.data}
@@ -224,7 +224,8 @@ function ExamForm() {
 
                             <div>
                                 <label htmlFor="documentoUrl" className='block text-sm font-medium mb-1'>Link do Documento:</label>
-                                <textarea
+                                <input
+                                    type='text'
                                     name='documentoUrl'
                                     id='documentoUrl'
                                     value={formData.documentoUrl}
