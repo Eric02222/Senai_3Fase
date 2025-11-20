@@ -10,7 +10,7 @@ const MedicalRepordList = () => {
     const fetchPatients = async () => {
         const token = localStorage.getItem("token")
         try {
-            const res = await axios.get("http://localhost:3000/pacientes" , { headers: { Authorization: `Bearer ${token}` } })
+            const res = await axios.get("http://localhost:4000/pacientes" , { headers: { Authorization: `Bearer ${token}` } })
 
             setPatients(res.data)
         } catch (e) {

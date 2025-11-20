@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link, useNavigate, NavLink  } from 'react-router';
 import { MdDashboard, MdExitToApp, MdMenu, MdClose } from 'react-icons/md'
 import { FaUserPlus, FaListAlt, FaCalendarCheck } from 'react-icons/fa'
 import { useAuth } from '../../contexts/AuthContext';
@@ -37,28 +37,38 @@ export const SideMenu = () => {
             <nav className='flex-1 p-4 space-y-4 overflow-y-auto'>
                 <ul className='space-y-3'>
                     <li>
-                        <Link to="/dashboard" className='flex items-center gap-3 hover:text-cyan-300'><MdDashboard size={20} />{!isCollapse && <span>Inicio</span>} </Link>
+                        <NavLink  to="/dashboard" className={({ isActive }) =>
+                            isActive ? "bg-cyan-600 font-bold flex items-center gap-3 p-1 w-full rounded transition duration-300" : "flex items-center gap-3 hover:text-cyan-300 transition duration-300"
+                        }><MdDashboard size={20} />{!isCollapse && <span>Inicio</span>} </NavLink >
                     </li>
 
                     {!isCollapse && <h2 className='text-white py-4 font-bold text-lg'>Pacientes</h2>}
 
                     <li>
-                        <Link to="/prontuarios" className='flex items-center gap-3 hover:text-cyan-300'><FaListAlt size={20} />{!isCollapse && <span>Protuarios</span>} </Link>
+                        <NavLink to="/prontuarios" className={({ isActive }) =>
+                            isActive ? "bg-cyan-600 font-bold flex items-center gap-3 p-1 w-full rounded transition duration-300" : "flex items-center gap-3 hover:text-cyan-300 transition duration-300"
+                        }><FaListAlt size={20} />{!isCollapse && <span>Protuarios</span>} </NavLink>
                     </li>
 
                     <li>
-                        <Link to="/pacientes" className='flex items-center gap-3 hover:text-cyan-300'><FaUserPlus size={20} />{!isCollapse && <span>Pacientes</span>} </Link>
+                        <NavLink to="/pacientes" className={({ isActive }) =>
+                            isActive ? "bg-cyan-600 font-bold flex items-center gap-3 p-1 w-full rounded transition duration-300" : "flex items-center gap-3 hover:text-cyan-300 transition duration-300"
+                        }><FaUserPlus size={20} />{!isCollapse && <span>Pacientes</span>} </NavLink>
                     </li>
 
                     {!isCollapse && <h2 className='text-white py-4 font-bold text-lg'>Consultas e Exames</h2>}
 
 
                     <li>
-                        <Link to="/consultas" className='flex items-center gap-3 hover:text-cyan-300'><FaCalendarCheck size={20} />{!isCollapse && <span>Consultas</span>} </Link>
+                        <NavLink to="/consultas" className={({ isActive }) =>
+                            isActive ? "bg-cyan-600 font-bold flex items-center gap-3 p-1 w-full rounded transition duration-300" : "flex items-center gap-3 hover:text-cyan-300 transition duration-300"
+                        }><FaCalendarCheck size={20} />{!isCollapse && <span>Consultas</span>} </NavLink>
                     </li>
 
                     <li>
-                        <Link to="/exames" className='flex items-center gap-3 hover:text-cyan-300'><FaListAlt size={20} />{!isCollapse && <span>Exames</span>} </Link>
+                        <NavLink to="/exames" className={({ isActive }) =>
+                            isActive ? "bg-cyan-600 font-bold flex items-center gap-3 p-1 w-full rounded transition duration-300" : "flex items-center gap-3 hover:text-cyan-300 transition duration-300"
+                        }><FaListAlt size={20} />{!isCollapse && <span>Exames</span>} </NavLink>
                     </li>
 
                 </ul>
@@ -67,7 +77,7 @@ export const SideMenu = () => {
             {/*Botão Sair*/}
             <div className='p-4 border-t border-cyan-700'>
                 <button onClick={handleLogout} className='flex items-center gap-3 text-red-300 hover:text-red-500 w-full'>
-                    <MdExitToApp size={20}/>
+                    <MdExitToApp size={20} />
                     {!isCollapse && <span>Sair</span>}
                 </button>
             </div>

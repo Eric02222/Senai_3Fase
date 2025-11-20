@@ -9,7 +9,7 @@ function ConsultsCount() {
         const fetchConsults = async () => {
             const token = localStorage.getItem("token")
             try{
-                const res = await axios.get("http://localhost:3000/consultas", { 
+                const res = await axios.get("http://localhost:4000/consultas", { 
                     headers: { Authorization: `Bearer ${token}` },
                     params: {page: 1, limit: 100}
                  });
